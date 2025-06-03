@@ -17,6 +17,39 @@
 | 머신 러닝 & 딥러닝 기초 | - k-NN, SVM<br>- CNN, GAN, Vision Transformer<br>- DNN 모듈 사용법 | 필기체 숫자 인식 모델 적용 |
 | 고급 응용 및 실무 프로젝트 | - YOLO, EfficientDET, U-Net<br>- 이미지 생성 (StyleGAN 등)<br>- 의료/건설 분야 사례 분석 | 학습 모델 적용 및 최종 프로젝트 작성 |
 
+## ⚙️ Directory.Build.props
+```
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+	<PropertyGroup>
+		<!-- OpenCV 경로 직접 지정 -->
+		<OpenCVIncludeDir>D:\OpenCV\build\include</OpenCVIncludeDir>
+		<OpenCVLibDir>D:\OpenCV\build\x64\vc16\lib</OpenCVLibDir>
+	</PropertyGroup>
+
+	<ItemDefinitionGroup>
+		<ClCompile>
+			<AdditionalIncludeDirectories>
+				$(OpenCVIncludeDir);
+				%(AdditionalIncludeDirectories)
+			</AdditionalIncludeDirectories>
+		</ClCompile>
+		<Link>
+			<AdditionalLibraryDirectories>
+				$(OpenCVLibDir);
+				%(AdditionalLibraryDirectories)
+			</AdditionalLibraryDirectories>
+			<AdditionalDependencies>
+				opencv_world4110d.lib;
+				%(AdditionalDependencies)
+			</AdditionalDependencies>
+		</Link>
+	</ItemDefinitionGroup>
+
+</Project>
+```
+
 ## ⚙️ OpenCV C++ 설치 방법
 
 ### 🪟 Windows (MSVC + CMake + OpenCV prebuilt)
