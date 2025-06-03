@@ -17,7 +17,9 @@
 | 머신 러닝 & 딥러닝 기초 | - k-NN, SVM<br>- CNN, GAN, Vision Transformer<br>- DNN 모듈 사용법 | 필기체 숫자 인식 모델 적용 |
 | 고급 응용 및 실무 프로젝트 | - YOLO, EfficientDET, U-Net<br>- 이미지 생성 (StyleGAN 등)<br>- 의료/건설 분야 사례 분석 | 학습 모델 적용 및 최종 프로젝트 작성 |
 
-## ⚙️ Directory.Build.props
+## Visual Studio 2022
+
+### ⚙️ Directory.Build.props
 ```
 <?xml version="1.0" encoding="utf-8"?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -49,6 +51,11 @@
 
 </Project>
 ```
+
+## Visual Studio Code
+
+### ⚙️ 
+
 
 ## ⚙️ OpenCV C++ 설치 방법
 
